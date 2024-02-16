@@ -35,22 +35,16 @@ oled_ctrl_s_20220323.py を oled_ctrl_s_lite.py に読み替えてインスト�
 オリジナル版：
 ```python3
 while True:
-        time.sleep(0.25)
-        try:
-            oled.disp()
+    time.sleep(0.25)
+    try:
+        oled.disp()
 ```
 
 軽量版：
 ```python3
-first = True # First exec of the while loop
-    while True:
-        if first == True:
-            time.sleep(1)
-            oled.disp()
-            first = False
-        else:
-            oled.soc.send(b'idle\n')
-            ret = oled.soc.recv(bufsize).decode()
-        try:
-            oled.disp()
+while True:
+    oled.soc.send(b'idle\n')
+    ret = oled.soc.recv(bufsize).decode()
+    try:
+        oled.disp()
 ```
