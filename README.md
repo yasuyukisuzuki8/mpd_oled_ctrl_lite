@@ -4,7 +4,7 @@ Takazineさんが作成された秋月電子のSO1602AW というI2C-OLEDを使�
 ### 導入方法
 まず GitHubから mpd_oled_ctrl_lite をダウンロードしてください。
 
-<>Code▼ → Download ZIP か、またはgitをインストール済の場合は、
+<> Code ▼ → Download ZIP か、またはgitをインストール済の場合は、
 ```
 $ git clone https://github.com/yasuyukisuzuki8/mpd_oled_ctrl_lite.git
 ```
