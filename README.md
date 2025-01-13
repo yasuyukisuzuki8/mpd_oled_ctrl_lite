@@ -23,7 +23,10 @@ oled_ctrl_s_20220323.py を oled_ctrl_s_lite.py に読み替えてインスト�
 
 上記サイトの「りちぇるかあれ」さんのコメント（投稿: りちぇるかあれ | 2022年4月 7日 (木) 17時17分）にも書いてありますが、現時点で Volumio3 は Python2 が標準になっています。Python3 は python ではなく python3コマンドで動作します。Volumio では Python3 用の smbus モジュールを入手してください。
 ```
-sudo apt-get install -y python3-smbus
+sudo apt update
+```
+```
+sudo apt install -y python3-smbus
 ```
 systemdにサービスを登録する前に、コマンドラインで動作確認すると良いでしょう。smbus モジュールが無ければ、ImportError: No module named smbus というエラーが出ます。
 ```
