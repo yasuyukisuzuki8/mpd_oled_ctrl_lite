@@ -9,6 +9,8 @@ Takazineさんが作成された秋月電子のSO1602AW というI2C-OLEDを使�
 git clone https://github.com/yasuyukisuzuki8/mpd_oled_ctrl_lite.git
 ```
 
+上記の git clone の方法では、/home/user名/mpd_oled_ctrl_lite/ 配下に oled_ctrl_s_lite.py がコピーされます。必要に応じてホームディレクトリの /home/pi や /home/volumio などに oled_ctrl_s_lite.py を移動して利用ください。
+
 以降の導入方法はTakazinさんが作成、「りちぇるかあれ」さんがPython3に移植されたオリジナル版と基本的に同じです。
 
 以下のサイトを参照し、
@@ -18,6 +20,15 @@ git clone https://github.com/yasuyukisuzuki8/mpd_oled_ctrl_lite.git
 kakasiは使いませんので、「kakasiをインストール」をスキップし、
 
 oled_ctrl_s_20220323.py を oled_ctrl_s_lite.py に読み替えてインストール、実行してください。
+
+上記サイトの「りちぇるかあれ」さんのコメント（投稿: りちぇるかあれ | 2022年4月 7日 (木) 17時17分）にも書いてありますが、現時点で Volumio3 は Python2 が標準になっています。Python3 は python ではなく python3コマンドで動作します。Volumio では Python3 用の smbus モジュールを入手してください。
+```
+sudo apt-get install -y python3-smbus
+```
+systemdにサービスを登録する前に、コマンドラインで動作確認すると良いでしょう。smbus モジュールが無ければ、ImportError: No module named smbus というエラーが出ます。
+```
+python3 ./oled_ctrl_s_lite.py
+```
 
 ### Takazineさんのオリジナル版との共通点
 
