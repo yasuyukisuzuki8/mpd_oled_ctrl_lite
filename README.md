@@ -6,7 +6,7 @@ Takazineさんが作成された秋月電子のSO1602AW というI2C-OLEDを使�
 
 <> Code ▼ → Download ZIP か、またはgitをインストール済の場合は、
 ```
-$ git clone https://github.com/yasuyukisuzuki8/mpd_oled_ctrl_lite.git
+git clone https://github.com/yasuyukisuzuki8/mpd_oled_ctrl_lite.git
 ```
 
 以降の導入方法はTakazinさんが作成、「りちぇるかあれ」さんがPython3に移植されたオリジナル版と基本的に同じです。
